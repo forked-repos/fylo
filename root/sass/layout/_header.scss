@@ -1,0 +1,138 @@
+.nav {
+    @include flexRow(true);
+    @include flexContent($align: center, $justify: space-between);
+
+    font-family: Raleway, sans-serif;
+    margin-bottom: 3rem;
+
+    &__logo {
+
+        @media only screen and (max-width: 375px) {
+            width: 25%;
+        }
+
+        & img {
+            cursor: pointer;
+            width: 85%;
+
+            @media only screen and (max-width: 1366px) {
+                width: 80%;
+            }
+
+            @media only screen and (max-width: 812px) {
+                width: 60%;
+            }
+
+            @media only screen and (max-width: 414px) {
+                width: 45%;
+            }
+
+            @media only screen and (max-width: 375px) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__links {
+        @include flexRow(true);
+
+        padding-right: 3rem;
+
+        @media only screen and (max-width: 414px) {
+            padding-right: 0;
+        }
+
+        & li {
+            text-transform: capitalize;
+
+            &:not(:first-of-type) {
+                margin-left: 5rem;
+
+                @media only screen and (max-width: 414px) {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    @include flexRow(true);
+    @include flexContent($align: center, $justify: space-between);
+
+    @media only screen and (max-width: 768px) {
+        @include flexRow(false);
+    }
+
+    &-info {
+        flex-basis: 45%;
+        padding-bottom: 5rem;
+
+        @media only screen and (max-width: 1024px) {
+            padding-top: 2rem;
+        }
+
+        @media only screen and (max-width: 768px) {
+            order: 2;
+        }
+
+        &__header {
+            margin-bottom: 2rem;
+
+            & h2 {
+                margin-bottom: 2.5rem;
+
+                @media only screen and (max-width: 768px) {
+                    text-align: center;
+                }
+            }
+        }
+
+        &__form {
+            @media only screen and (max-width: 768px) {
+                @include flexRow(false);
+                @include flexContent($align: center);
+            }
+
+            & input {
+                margin-right: 1.2rem;
+
+                @media only screen and (max-width: 768px) {
+                    margin-bottom: 1.5rem;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    &__img {
+        flex-basis: 50%;
+        margin-right: 3rem;
+        width: 100%;
+
+        @media only screen and (max-width: 768px) {
+            order: 1;
+        }
+
+        @media only screen and (max-width: 768px) {
+            @include flexRow(true);
+        }
+
+        & img {
+            width: 100%;
+
+            @media only screen and (max-width: 1366px) {
+                width: 95%;
+            }
+
+            @media only screen and (max-width: 768px) {
+                margin: 0 auto;
+                width: 60%;
+            }
+
+            @media only screen and (max-width: 375px) {
+                width: 70%;
+            }
+        }
+    }
+}

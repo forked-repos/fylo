@@ -3,66 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Challenge set by Frontend Mentor. Simple landing page with two columns layout.">
+  <meta name="keywords" content="challenge, frontend, landing">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
   
   <title>Frontend Mentor | Fylo landing page with two column layout</title>
-
 </head>
+
 <body>
+  <header class="container">
+    <nav class="nav">
+      <div class="nav__logo">
+        <h1>Fylo</h1>
+        <img src="images/logo.svg" alt="Fylo logo" tabindex="0">
+      </div>
+      <ul class="nav__links">
+        <li><a href="#" class="link">features</a></li>
+        <li><a href="#" class="link">team</a></li>
+        <li><a href="#" class="link">sign in</a></li>
+      </ul>
+    </nav>
 
-  <footer>
+    <div class="hero">
+      <div class="hero-info">
+        <section class="hero-info__header">
+          <h2 class="heading__secondary--m">all your files in one secure location, accessible anywhere.</h2>
+          <p class="paragraph">
+            Fylo stores your most important files in one secure location. 
+            Access them wherever you need, share and collaborate with friends, 
+            family, and co-workers.
+          </p>
+        </section>
+        
+        <form class="hero-info__form">
+          <input type="email" name="email" placeholder="Enter your email..." class="medium">
+          <button onclick=" " type="submit" class="btn btn--shadow" tabindex="0">get started</button>
+        </form>
+      </div>
 
+      <div class="hero__img">
+        <img src="images/illustration-1.svg" alt="Two persons checking their files">
+      </div>
+    </div>
+  </header> 
+
+  <main class="infographic container--alternative">
+    <section class="infographic-info">
+      <header class="infographic-info__header">
+        <h2 class="heading__secondary--m">stay productive, wherever you are</h2>
+        <p class="infographic-info__paragraph">
+          Never let location be an issue when accessing your files. Fylo has you 
+          covered for all of your file storage needs.
+        </p>
+        <p class="infographic-info__paragraph">
+          Securely share files and folders with friends, family and colleagues for 
+          live collaboration. No email attachments required!
+        </p>
+        <a href="#" class="link link--flex link--cyan infographic-info__link">
+          <p>See how Fylo works</p>
+          <img src="images/icon-arrow.svg" alt="Little right arrow icon" class="r-arrow">
+        </a>
+      </header>
+      <aside class="testimonials">
+        <img src="images/icon-quotes.svg" alt="Quotations icon">
+        <p class="paragraph--s">
+          Fylo has improved our team productivity by an order of magnitude. Since 
+          making the switch our team has become a well-oiled collaboration machine.
+        </p>
+        <footer class="testimonials__profile">
+          <img src="images/avatar-testimonial.jpg" alt="Avatar testimonial">
+          <aside>
+            <h3 class="heading__name">
+              kyle burton
+            </h3>
+            <p class="paragraph paragraph--xs">Founder & CEO, Huddle</p>
+          </aside>
+        </footer>
+      </aside>
+    </section>
+
+    <div class="infographic-img">
+      <img src="images/illustration-2.svg" alt="Three persons communicating virtually">
+    </div>
+  </main>
+
+  <aside class="cta container">
+    <header class="cta__header">
+      <h2 class="heading__secondary--s heading--white">get early access today</h2>
+      <p class="paragraph--s paragraph--white">
+        It only takes a minute to sign up and our free starter tier is extremely generous. 
+        If you have any questions, our support team would be happy to help you.
+      </p>
+    </header>
+
+    <form class="cta__form">
+      <input type="email" name="email" placeholder="email@example.com" class="shadow large">
+      <button type="submit" class="btn--large shadow" tabindex="0">get started for free</button>
+    </form>
+  </aside>
+
+  <footer class="footer container--alternative-2">
+    <div class="footer__img">
+      <img src="images/logo-white.svg" alt="Fylo logo" tabindex="0">
+    </div>
+
+    <div class="footer-info">
+      <ul class="footer-info__contact">
+        <li>
+          <img src="images/icon-phone.svg" alt="Phone icon">
+          <p>Phone: +1-543-123-4567</p>
+        </li>
+        <li>
+          <img src="images/icon-email.svg" alt="Email icon">
+          <p>example@fylo.com</p>
+        </li>
+      </ul>
+      <ul class="footer-info__links">
+        <li><a href="#" class="link link--capitalize">about us</a></li>
+        <li><a href="#" class="link link--capitalize">jobs</a></li>
+        <li><a href="#" class="link link--capitalize">press</a></li>
+        <li><a href="#" class="link link--capitalize">blog</a></li>
+        <li><a href="#" class="link link--capitalize">contact us</a></li>
+        <li><a href="#" class="link link--capitalize">terms</a></li>
+        <li><a href="#" class="link link--capitalize">privacy</a></li>
+      </ul>
+      <ul class="footer-info__social">
+        <li>
+            <img src="images/facebook.svg" alt="Facebook icon" tabindex="0">
+        </li>
+        <li>
+            <img src="images/twitter.svg" alt="Twitter icon" tabindex="0">
+        </li>
+        <li>
+            <img src="images/instagram.svg" alt="Instagram icon" tabindex="0">
+        </li>
+      </ul>
+    </div>
   </footer>
 </body>
 </html>
-
-<!-- 
-    Features
-  Team
-  Sign In
-
-  All your files in one secure location, accessible anywhere.
-
-  Fylo stores your most important files in one secure location. 
-  Access them wherever you need, share and collaborate with friends, 
-  family, and co-workers.
-
-  Get Started
-
-  Stay productive, wherever you are
-
-  Never let location be an issue when accessing your files. Fylo has you 
-  covered for all of your file storage needs.
-
-  Securely share files and folders with friends, family and colleagues for 
-  live collaboration. No email attachments required!
-
-  See how Fylo works
-
-  Fylo has improved our team productivity by an order of magnitude. Since 
-  making the switch our team has become a well-oiled collaboration machine.
-
-  Kyle Burton
-  Founder & CEO, Huddle
-
-  Get early access today
-
-  It only takes a minute to sign up and our free starter tier is extremely generous. 
-  If you have any questions, our support team would be happy to help you.
-
-  Get Started For Free
-
-  Phone: +1-543-123-4567
-  example@fylo.com
-
-  About Us
-  Jobs
-  Press
-  Blog
-
-  Contact Us
-  Terms
-  Privacy
- -->

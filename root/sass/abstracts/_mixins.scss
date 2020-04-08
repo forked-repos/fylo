@@ -1,0 +1,29 @@
+@mixin row 
+{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin column 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flexRow($row) 
+{
+    @if $row 
+    {
+        @include row
+    }
+    @else 
+    {
+        @include column;
+    }
+}
+
+@mixin flexContent($align: stretch, $justify: flex-start)
+{
+    align-items: $align;
+    justify-content: $justify;
+}

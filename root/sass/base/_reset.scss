@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    overflow-x: inherit;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: rgba($color-neutral-2, .1);
+    background-image: url(../images/bg-curve-desktop.svg);
+    box-sizing: border-box;
+    color: $color-primary-1;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    overflow-x: hidden;
+
+    @media only screen and (max-width: 1024px) {
+        font-size: 1.5rem;
+    }
+
+    @media only screen and (max-width: 812px) {
+        font-size: 1.3rem;
+    }
+}
+
+.container {
+    padding: 3% 4%;
+
+    @media only screen and (max-width: 414px) {
+        padding: 3% 6%;
+    }
+
+    &--alternative {
+        padding: 9% 4% 3% 4%;
+
+        @media only screen and (max-width: 414px) {
+            padding: 9% 6% 3% 6%;
+        }
+    }
+
+    &--alternative-2 {
+        padding: 7% 4% 3% 4%;
+
+        @media only screen and (max-width: 1366px) {
+            padding: 4% 4% 3% 4%;
+        }
+
+        @media only screen and (max-width: 414px) {
+            padding: 4% 6% 3% 6%;
+        }
+    }
+}
+
+.shadow {
+    box-shadow: 0 5px 10px rgba($color-black, .1);
+}

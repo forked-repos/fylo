@@ -1,0 +1,40 @@
+.btn {
+    background-color: $color-accent-1;
+    border: none;
+    border-radius: 3px;
+    color: $color-neutral-1;
+    cursor: pointer;
+    font-family: Raleway, sans-serif;
+    font-size: 1.4rem;
+    outline: none;
+    padding: 1.5rem;
+    text-transform: capitalize;
+    width: 34%;
+
+    @media only screen and (max-width: 1024px) {
+        font-size: 1.2rem;
+
+    }
+
+    @media only screen and (max-width: 812px) {
+        padding: 1.2rem;
+        width: 40%;
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: 1.2rem;
+        width: 55%;
+    }
+
+    @media only screen and (max-width: 414px) {
+        width: 95%;
+    }
+
+    &--large {
+        @extend .btn;
+
+        @media only screen and (max-width: 414px) {
+            width: 80%;
+        }
+    }
+}

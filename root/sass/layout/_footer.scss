@@ -1,0 +1,130 @@
+.footer {
+    background-color: $color-primary-1;
+    color: $color-neutral-1;
+    font-size: 1.6rem;
+
+    @media only screen and (max-width: 1024px) {
+        font-size: 1.2rem;
+    } 
+    
+    &__img {
+        width: 30%;
+
+        @media only screen and (max-width: 414px) {
+            margin-top: 3rem;
+        }
+
+        & img {
+            cursor: pointer;
+            width: 40%;
+
+            @media only screen and (max-width: 414px) {
+                width: 100%;
+            }
+        }
+    }
+
+    &-info {
+        @include flexRow(true);
+        @include flexContent($justify: space-between);
+
+        margin-top: 3rem;
+        width: 90%;
+
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 500px) {
+            @include flexRow(false);
+        }
+
+        &__contact {
+
+            @media only screen and (max-width: 500px) {
+                margin-bottom: 4rem;
+            }
+
+            & li {
+                @include flexRow(true);
+                @include flexContent($align: center);
+
+                &:not(:last-of-type) {
+                    margin-bottom: 1.5rem;
+                }
+
+                & img {
+                    @media only screen and (max-width: 500px) {
+                        width: 1.5rem;
+                    }
+                }
+
+                & p {
+                    margin-left: 2.5rem;
+
+                    @media only screen and (max-width: 500px) {
+                        margin-left: 1.5rem;
+                    }
+                }
+
+            }
+
+        }
+
+        &__links {
+            column-count: 2;
+            column-gap: 20rem;
+
+            @media only screen and (max-width: 500px) {
+                column-count: 1;
+                column-gap: 0;
+
+                margin-bottom: 4rem;
+            }
+
+            & li:not(:last-of-type) {
+                margin-bottom: 1.5rem;
+            }
+
+            @media only screen and (max-width: 1366px) {
+                column-gap: 17rem;
+            }
+
+            @media only screen and (max-width: 1024px) {
+                column-gap: 6rem;
+            }
+
+            @media only screen and (max-width: 667px) {
+                column-gap: 3rem;
+            }
+        }
+
+        &__social {
+            @include flexRow(true);
+            @include flexContent($justify: space-between);
+
+            width: 15%;
+
+            @media only screen and (max-width: 812px) {
+                width: 16%;
+            }
+
+            @media only screen and (max-width: 667px) {
+                width: 18%;
+            }
+
+            @media only screen and (max-width: 500px) {
+                margin: 0 auto;
+                width: 30%;
+            }
+
+            & img {
+                cursor: pointer;
+                
+                @media only screen and (max-width: 1024px) {
+                    width: 90%;
+                }
+            }
+        }
+    }
+}

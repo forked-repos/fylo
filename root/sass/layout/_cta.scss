@@ -1,0 +1,41 @@
+.cta {
+    @include flexRow(true);
+    @include flexContent($justify: space-between);
+
+    background-color: $color-primary-2;
+
+    @media only screen and (max-width: 768px) {
+        @include flexRow(false);
+        @include flexContent($align: center);
+    }
+
+    @media only screen and (max-width: 414px) {
+        padding: 3% 9%;
+    }
+
+    &__header {
+        flex-basis: 38%;
+
+        @media only screen and (max-width: 768px) {
+            flex-basis: 100%;
+            text-align: center;
+        }
+    }
+
+    &__form {
+        @include flexRow(false);
+
+        flex-basis: 48%;
+
+        @media only screen and (max-width: 768px) {
+            @include flexContent($align: center);
+
+            width: 100%;
+            margin: 3rem 0;
+        }
+
+        & input {
+            margin-bottom: 1.5rem;
+        }
+    }
+}

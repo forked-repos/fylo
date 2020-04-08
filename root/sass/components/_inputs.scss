@@ -1,0 +1,40 @@
+input[type="email"] {
+    border: 1px solid rgba($color-black, .4);
+    border-radius: 3px;
+    color: $color-primary-1;
+    font-family: Raleway, sans-serif;
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    outline: none;
+
+    @media only screen and (max-width: 1024px) {
+        font-size: 1.4rem;
+        padding: 1.2rem;
+    }
+
+    &::placeholder {
+        color: $color-neutral-2;
+        font-family: inherit;
+        font-size: 1.2rem;
+    }
+}
+
+.medium {
+    width: 55%;
+
+    @media only screen and (max-width: 414px) {
+        width: 95%;
+    }
+}
+
+.large {
+    width: 80%;
+
+    @media only screen and (max-width: 768px) {
+        width: 55%;
+    }
+
+    @media only screen and (max-width: 414px) {
+        width: 80%;
+    }
+}
